@@ -5,7 +5,6 @@ current_users = 0
 
 SCHEDULER.every '2s' do
 	last_users = current_users
-	last_users = 20
 	gcloud_data = HTTP.get("https://spreadsheets.google.com/feeds/list/1wdFW-3fJYgQrtEdRx6EbiNMzNze3CVryhCnyHqXRJbA/od6/public/basic?alt=json")
 	gcloud_data = gcloud_data.parse
 	# g_cloud_framework_view = gcloud_data['feed']['entry'][0]['title']['$t']
