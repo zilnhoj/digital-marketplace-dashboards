@@ -26,6 +26,6 @@ SCHEDULER.every '2s' do
 	dm_all_current_users = digital_marketplace_all.to_i
 
 	send_event('g_cloud_view', { current: current_users, last: last_users })
-	send_event('g_cloud_framework_view', { current: supplier_app_current_users, last: supplier_app_last_users })
+	send_event('supplier_app_view', { current: supplier_app_current_users, last: supplier_app_last_users })
 	send_event('dm_all_view', { current: dm_all_current_users, last: digital_marketplace_all_last_users })
 end
